@@ -45,6 +45,10 @@ h6 {
 }
 
 .btn {
+	font-family: "Hind Madurai", sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	color: #FAFAFA;
 	border-radius: 5px;
 	padding: 15px 50px;
 	text-align: center;
@@ -93,13 +97,6 @@ h6 {
 	transform: scale(1.2);
 	color: #D23166;
 	opacity: 1;
-}
-
-.header__button { 
-	font-family: "Hind Madurai", sans-serif;
-	font-weight: 700;
-	font-size: 16px;
-	color: #FAFAFA;
 }
 
 .open {
@@ -156,6 +153,56 @@ h6 {
 	transform: rotate(-45deg);
 }
 
+.hero__wrapper {
+	position: relative;
+}
+
+.hero__list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 200px 0 0 0;
+}
+
+.hero__pretext {
+	width: 175px;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	color: #0f0101;
+	margin: 0 0 5px 0;
+}
+
+.hero__title {
+	font-family: 'Fredoka', sans-serif;
+	width: 665px;
+	height: 130px;
+	font-weight: 700;
+	font-size: 57px;
+	line-height: 121%;
+	color: #0f0101;
+	margin: 0 0 35px 0;
+}
+
+.hero__text {
+	font-family: 'Hind Madurai', sans-serif;
+	width: 525px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	color: #0f0101;
+	opacity: 0.6;
+	margin: 0 0 65px 0;
+}
+
+.hero__img {
+	position: absolute;
+	top: -200px;
+    left: 80%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
 /* PC */
 @media (max-width: 1070px) {
 	.wrapper {
@@ -164,6 +211,37 @@ h6 {
 
 	.header__button {
 		margin: 0;
+	}
+
+	.hero__wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.hero__img {
+	position: static;
+	top: 0;
+    left: 0;
+    transform: translateX(0);
+    z-index: 0;
+	width: auto;
+	height: auto;
+	}
+
+	.hero__list {
+		margin: 0;
+	}
+
+	.hero__item {
+		width: auto;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.hero__title,
+	.hero__text {
+		width: auto;
+		height: auto;
 	}
 }
 
@@ -199,6 +277,10 @@ h6 {
 		row-gap: 40px;
 	}
 
+	.hero__title {
+		font-size: 48px;
+	}
+
 }
 
 /* MOBILE */
@@ -207,6 +289,13 @@ h6 {
 		max-width: 321px;
 	}
 
+	.hero__title {
+		font-size: 36px;
+	}
+
+	.hero__text {
+		font-size: 16px;
+	}
 }
 
 /* MINI MOBILE */
