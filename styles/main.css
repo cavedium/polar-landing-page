@@ -50,8 +50,13 @@ h6 {
 	text-align: center;
 	background-color: #D23166;
 	border-color: transparent;
+	transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.btn:hover {
+	background-color: #902549;
+	opacity: 1;
+}
 
 .header__wrapper {
 	display: flex;
