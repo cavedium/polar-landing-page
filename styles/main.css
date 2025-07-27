@@ -159,6 +159,7 @@ h6 {
 
 .hero__wrapper {
 	position: relative;
+	padding: 0 0 235px 0;
 }
 
 .hero__list {
@@ -207,6 +208,50 @@ h6 {
     z-index: 10;
 }
 
+.delivery {
+	background-color: #FFFFFF;
+	padding: 100px 0;
+}
+
+.delivery__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+}
+
+.delivery__item {
+	border-radius: 7px;
+	border: 1px solid rgba(0, 0, 0, 0.03);
+	width: 250px;
+	height: 200px;
+	box-shadow: 20px 20px 50px 0 rgba(0, 0, 0, 0.03);
+	background: #fff;
+}
+
+.delivery__img {
+	margin: 25px 0 25px 0;
+}
+
+.delivery__title {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	color: #000;
+	margin: 0 0 10px 0;
+}
+
+.delivery__text {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: #000;
+	opacity: 0.6;
+	margin: 0 25px 0 25px;
+}
+
 /* PC */
 @media (max-width: 1070px) {
 	.wrapper {
@@ -247,6 +292,12 @@ h6 {
 		width: auto;
 		height: auto;
 	}
+
+	.delivery__list {
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 25px;
+	}
 }
 
 /* TABLET */
@@ -285,6 +336,9 @@ h6 {
 		font-size: 48px;
 	}
 
+	.hero__wrapper {
+		padding: 0 0 150px 0;
+	}
 }
 
 /* MOBILE */
