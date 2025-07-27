@@ -124,7 +124,8 @@ h6 {
 	background-color: #000000;
 }
 
-.header__burger::before, .header__burger::after {
+.header__burger::before,
+.header__burger::after {
 	content: '';
 	position: absolute;
 	height: 3px;
@@ -203,9 +204,9 @@ h6 {
 .hero__img {
 	position: absolute;
 	top: -200px;
-    left: 80%;
-    transform: translateX(-50%);
-    z-index: 10;
+	left: 80%;
+	transform: translateX(-50%);
+	z-index: 10;
 }
 
 .delivery {
@@ -252,6 +253,46 @@ h6 {
 	margin: 0 25px 0 25px;
 }
 
+.details__wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.details__list {
+	display: flex;
+	flex-direction: column;
+}
+
+.details__title {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 600;
+	font-size: 44px;
+	line-height: 111%;
+	color: #150101;
+	width: 350px;
+	margin: 140px 0 15px 0;
+}
+
+.details__text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #150101;
+	opacity: 0.6;
+	width: 445px;
+	margin: 0 0 50px 0;
+}
+
+.details__img {
+	position: absolute;
+	top: -80px;
+	left: 80%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
 /* PC */
 @media (max-width: 1070px) {
 	.wrapper {
@@ -262,33 +303,37 @@ h6 {
 		margin: 0;
 	}
 
-	.hero__wrapper {
+	.hero__wrapper,
+	.details__wrapper {
 		display: flex;
 		flex-direction: column-reverse;
 	}
 
-	.hero__img {
-	position: static;
-	top: 0;
-    left: 0;
-    transform: translateX(0);
-    z-index: 0;
-	width: auto;
-	height: auto;
+	.hero__img,
+	.details__img {
+		position: static;
+		top: 0;
+		left: 0;
+		transform: translateX(0);
+		z-index: 0;
+		width: auto;
+		height: auto;
 	}
 
 	.hero__list {
 		margin: 0;
 	}
 
-	.hero__item {
+	.hero__item,
+	.details__item {
 		width: auto;
 		text-align: center;
 		margin: 0 auto;
 	}
 
 	.hero__title,
-	.hero__text {
+	.hero__text,
+	.details__title {
 		width: auto;
 		height: auto;
 	}
@@ -297,6 +342,16 @@ h6 {
 		flex-wrap: wrap;
 		justify-content: space-around;
 		gap: 25px;
+	}
+
+	.details__title {
+		margin-top: 0;
+	}
+
+	.details__img {
+		width: 600px;
+		height: 600px;
+		margin: 0 auto;
 	}
 }
 
@@ -339,6 +394,11 @@ h6 {
 	.hero__wrapper {
 		padding: 0 0 150px 0;
 	}
+
+	.details__img {
+		width: 450px;
+		height: 450px;
+	}
 }
 
 /* MOBILE */
@@ -347,12 +407,22 @@ h6 {
 		max-width: 321px;
 	}
 
-	.hero__title {
+	.hero__title,
+	.details__title {
 		font-size: 36px;
 	}
 
 	.hero__text {
 		font-size: 16px;
+	}
+
+	.details__img {
+		width: 300px;
+		height: 300px;
+	}
+
+	.details__text {
+		width: auto;
 	}
 }
 
@@ -364,6 +434,11 @@ h6 {
 }
 
 @keyframes burgerAnimation {
-	from {opacity: 0;}
-	to {opacity: 1;}
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
