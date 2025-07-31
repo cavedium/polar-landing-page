@@ -258,6 +258,7 @@ h6 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	margin-bottom: 140px;
 }
 
 .details__list {
@@ -291,6 +292,143 @@ h6 {
 	left: 80%;
 	transform: translateX(-50%);
 	z-index: 10;
+}
+
+.product {
+	background-color: #fff;
+	padding: 140px 0;
+}
+
+.product__title {
+	margin: 0 0 65px 0;
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 600;
+	font-size: 44px;
+	text-align: center;
+	color: #150101;
+}
+
+.product__category-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.product__category-item {
+	font-weight: 500;
+	font-size: 18px;
+	color: #000;
+	transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+	opacity: 0.6;
+}
+
+.product__category-item:hover {
+	font-weight: 500;
+	color: #000;
+	text-decoration: underline;
+	transform: scale(1.2);
+	opacity: 1;
+}
+
+.product__card-list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.product__card-item {
+	display: flex;
+	flex-direction: row;
+	gap: 85px;
+}
+
+.product__card-item--flex {
+	flex-direction: row-reverse;
+}
+
+.product__card-item--align {
+	text-align: end;
+}
+
+.product__card-wrapper {
+	margin: auto 0;
+}
+
+.product__card-title {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	color: #000;
+	margin: 0 0 10px 0;
+}
+
+.product__card-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000;
+	opacity: 0.7;
+	margin: 0 0 30px 0;
+}
+
+.product__card-price {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 500;
+	font-size: 26px;
+	color: #000;
+	margin: 0 0 30px 0;
+}
+
+.product__card-price span {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	text-decoration: line-through;
+	color: #000;
+	opacity: 0.7;
+}
+
+.product__comment-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0 0 50px 0;
+}
+
+.product__text-wrapper {
+	margin: 0 10px 0;
+}
+
+.product__comment-title {
+	font-weight: 500;
+	font-size: 24px;
+	color: #000;
+	margin: 0 0 5px 0;
+}
+
+.product__comment-untitle {
+	font-weight: 500;
+	font-size: 12px;
+	color: #000;
+	opacity: 0.7;
+	text-transform: uppercase;
+}
+
+.product__comment-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000;
+	opacity: 0.7;
+	width: 325px;
+}
+
+.product__comment-text span {
+	color: orange;
+	font-size: 30px;
+	font-weight: bold;
 }
 
 /* PC */
@@ -353,6 +491,24 @@ h6 {
 		height: 600px;
 		margin: 0 auto;
 	}
+
+	.product__category-item {
+		font-size: 14px;
+	}
+
+	.product__card-item {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 10px;
+	}
+
+	.product__card-title,
+	.product__card-text,
+	.product__card-price {
+		width: 481px;
+	}
+
 }
 
 /* TABLET */
@@ -399,6 +555,25 @@ h6 {
 		width: 450px;
 		height: 450px;
 	}
+
+	.product__title {
+		margin: 0 0 20px 0;
+	}
+
+	.product__category-list {
+		width: auto;
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center;
+		margin-bottom: 0;
+		gap: 30px;
+	}
+
+	.product__card-title,
+	.product__card-text,
+	.product__card-price {
+		width: auto;
+	}
 }
 
 /* MOBILE */
@@ -423,6 +598,11 @@ h6 {
 
 	.details__text {
 		width: auto;
+	}
+
+	.product__card-img {
+		width: 300px;
+		height: 300px;
 	}
 }
 
